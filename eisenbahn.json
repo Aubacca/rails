@@ -1,0 +1,481 @@
+{
+  "posts": [{
+    "id": 1,
+    "title": "json-server",
+    "author": "typicode"
+  }],
+  "comments": [{
+      "id": 1,
+      "body": "some comment 1",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment 2",
+      "postId": 1
+    }
+  ],
+  "companies": [{
+      "code": "SBB",
+      "desc": "Schweizerische Bundes Bahn"
+    },
+    {
+      "code": "BLS",
+      "desc": "Bern Lötschber Simplon Bahn"
+    },
+    {
+      "code": "DB",
+      "desc": "Deutsche Bundesbahn"
+    },
+    {
+      "code": "SNCF",
+      "desc": "Franz. Staatsbahn"
+    }
+  ],
+  "epoche": [{
+    "I": "1900 - 1920",
+    "II": "1920 - 1950",
+    "III": "1950 - 1970",
+    "IV": "1970 - 1990",
+    "V": "1990 - 2000",
+    "VI": "2000 - 2010",
+    "VII": "2010 - today"
+  }],
+  "lokType": [{
+      "dampf": "Dampf"
+    },
+    {
+      "diesel": "Diesel"
+    },
+    {
+      "elektro": "Elektro"
+    }
+  ],
+  "hersteller": [{
+    "roco": "Roco",
+    "liliput": "Liliput",
+    "jouef": "Jouef"
+  }],
+  "loks": [{
+    "lokType": "elektro",
+    "companyCode": "SBB",
+    "epoche": "VI",
+    "bezeichnung": "Re 4/4 II",
+    "nummer": "11128",
+    "hersteller": "roco",
+    "preis": "150.00 CHF",
+    "bemerkung": ""
+  }],
+  "vehicles": [{
+      "vehicleKind": "GW",
+      "vehicleType": "Fals",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "Kies AG Wil",
+      "farbe": "olive grün",
+      "nummer": "20 85 065 9 014-9",
+      "hersteller": "liliput",
+      "preis": "200.00 CHF",
+      "anzahl": 13,
+      "bemerkung": "Mit Verpackung"
+    },
+    {
+      "vehicleKind": "GW",
+      "vehicleType": "Uacss",
+      "companyCode": "SNCF",
+      "epoche": "IV",
+      "bezeichnung": "Transcéréales",
+      "farbe": "hell grau",
+      "nummer": "33 87 934 5 229-7",
+      "hersteller": "jouef",
+      "preis": "100.00 CHF",
+      "anzahl": 5,
+      "bemerkung": "Transcéréales, mit Verpackung"
+    }, {
+      "vehicleKind": "GW",
+      "vehicleType": "Tgpps",
+      "companyCode": "DB",
+      "epoche": "IV",
+      "bezeichnung": "Teleskophaubenwagen",
+      "farbe": "braun",
+      "nummer": "31 87 437 5 212-9",
+      "hersteller": "roco",
+      "preis": "35.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "WRm",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "Speisewagen RIC",
+      "farbe": "orange",
+      "nummer": "61 85 88-70 003-8",
+      "hersteller": "ls models",
+      "preis": "55.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "Bcm",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "Liegewagen",
+      "farbe": "blau",
+      "nummer": "61 85 50-70 100-6",
+      "hersteller": "roco",
+      "preis": "55.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "Bcm",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "Liegewagen",
+      "farbe": "blau",
+      "nummer": "61 85 50-70 102-5",
+      "hersteller": "ls models",
+      "preis": "55.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "Bcm",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "Liegewagen",
+      "farbe": "blau",
+      "nummer": "61 85 50-70 105-5",
+      "hersteller": "roco",
+      "preis": "55.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "Bcm",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "Liegewagen",
+      "farbe": "blau",
+      "nummer": "61 85 50-70 111-3",
+      "hersteller": "roco",
+      "preis": "55.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "Bcm",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "Liegewagen",
+      "farbe": "blau",
+      "nummer": "61 85 50-70 112-1",
+      "hersteller": "roco",
+      "preis": "55.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "Bcm",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "Liegewagen",
+      "farbe": "blau",
+      "nummer": "61 85 50-70 117-1",
+      "hersteller": "roco",
+      "preis": "55.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 6/6",
+      "companyCode": "SBB",
+      "epoche": "V",
+      "bezeichnung": "Münchenstein",
+      "farbe": "grün",
+      "nummer": "11640",
+      "hersteller": "hag",
+      "preis": "300.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung, runde Lampen"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 6/6",
+      "companyCode": "SBB",
+      "epoche": "V",
+      "bezeichnung": "Stein am Rhein",
+      "farbe": "rot",
+      "nummer": "11666",
+      "hersteller": "märklin",
+      "preis": "300.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung, eckige Lampen"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 6/6",
+      "companyCode": "SBB",
+      "epoche": "V",
+      "bezeichnung": "Reuchenette-Péry",
+      "farbe": "grün",
+      "nummer": "11662",
+      "hersteller": "roco",
+      "preis": "300.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung, eckige Lampen, Rangiergirffe"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 6/6",
+      "companyCode": "SBB",
+      "epoche": "V",
+      "bezeichnung": "Kloten",
+      "farbe": "rot",
+      "nummer": "11611",
+      "hersteller": "hag",
+      "preis": "300.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung, eckige Lampen"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 6/6",
+      "companyCode": "SBB",
+      "epoche": "V",
+      "bezeichnung": "Immensee",
+      "farbe": "grün",
+      "nummer": "11681",
+      "hersteller": "roco",
+      "preis": "300.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung, runde Lampen"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 6/6",
+      "companyCode": "SBB",
+      "epoche": "V",
+      "bezeichnung": "Ziegelbrücke",
+      "farbe": "grün",
+      "nummer": "11665",
+      "hersteller": "roco",
+      "preis": "300.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung, runde Lampen, zwei verschieden Wappen"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 6/6",
+      "companyCode": "SBB",
+      "epoche": "V",
+      "bezeichnung": "Cornaux",
+      "farbe": "grün",
+      "nummer": "11644",
+      "hersteller": "roco",
+      "preis": "300.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung, runde Lampen"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 6/6",
+      "companyCode": "SBB",
+      "epoche": "V",
+      "bezeichnung": "Uzwil",
+      "farbe": "grün",
+      "nummer": "11609",
+      "hersteller": "roco",
+      "preis": "300.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung, runde Lampen"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 6/6",
+      "companyCode": "SBB",
+      "epoche": "V",
+      "bezeichnung": "Affoltern am Albis",
+      "farbe": "rot",
+      "nummer": "11670",
+      "hersteller": "roco",
+      "preis": "300.00 CHF",
+      "anzahl": 2,
+      "bemerkung": "Mit Verpackung, eckige Lampen, Rangiergriffe"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 6/6",
+      "companyCode": "SBB Cargo",
+      "epoche": "V",
+      "bezeichnung": "Dornach, Arlesheim",
+      "farbe": "rot blau",
+      "nummer": "Re 620 051-3",
+      "hersteller": "roco",
+      "preis": "300.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung, eckige Lampen, Rangiergriffe, Cargo, zwei verschiedene Wappen"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 6/6",
+      "companyCode": "SBB Cargo",
+      "epoche": "V",
+      "bezeichnung": "Auvernier",
+      "farbe": "rot blau",
+      "nummer": "Re 620 058-8",
+      "hersteller": "märklin",
+      "preis": "300.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung, eckige Lampen, Rangiergriffe, Cargo, zwei verschiedene Wappen"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 6/6",
+      "companyCode": "SBB",
+      "epoche": "V",
+      "bezeichnung": "Gelterkinden",
+      "farbe": "grün",
+      "nummer": "11675",
+      "hersteller": "märklin",
+      "preis": "300.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Mit Verpackung, runde Lampen"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 6/6",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "Interlaken",
+      "farbe": "grün",
+      "nummer": "11629",
+      "hersteller": "lima",
+      "preis": "200.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Runde Lampen"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 6/6",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "Muttenz",
+      "farbe": "grün",
+      "nummer": "11635",
+      "hersteller": "lima",
+      "preis": "200.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Runde Lampen"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 465",
+      "companyCode": "BLS",
+      "epoche": "V",
+      "bezeichnung": "Jungfraujoch",
+      "farbe": "blau",
+      "nummer": "Re 465 003-2",
+      "hersteller": "roco",
+      "preis": "200.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "BLS Logo"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 460",
+      "companyCode": "SBB",
+      "epoche": "V",
+      "bezeichnung": "Haupenstein",
+      "farbe": "rot",
+      "nummer": "Re 460 038-3",
+      "hersteller": "hag",
+      "preis": "250.00 CHF",
+      "anzahl": 1,
+      "bemerkung": ""
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 460",
+      "companyCode": "SBB",
+      "epoche": "V",
+      "bezeichnung": "Wankdorf",
+      "farbe": "weiss",
+      "nummer": "Re 460 023-5",
+      "hersteller": "hag",
+      "preis": "250.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Werbung: Zurich relax"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 460",
+      "companyCode": "SBB",
+      "epoche": "V",
+      "bezeichnung": "Lavaux",
+      "farbe": "weiss, scharz",
+      "nummer": "Re 460 006-6",
+      "hersteller": "hag",
+      "preis": "250.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Werbung: Rutschi"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 465",
+      "companyCode": "BLS",
+      "epoche": "V",
+      "bezeichnung": "Brienzer Rothorn",
+      "farbe": "blau",
+      "nummer": "Re 465 018-0",
+      "hersteller": "roco",
+      "preis": "250.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "bls und EBT Logo"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 465",
+      "companyCode": "BLS",
+      "epoche": "V",
+      "bezeichnung": "La Vue-des-Alpes",
+      "farbe": "blau",
+      "nummer": "Re 465 015-6",
+      "hersteller": "roco",
+      "preis": "250.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "BLS Logo"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 465",
+      "companyCode": "BLS",
+      "epoche": "V",
+      "bezeichnung": "Jungfraujoch",
+      "farbe": "blau",
+      "nummer": "Re 465 003-2",
+      "hersteller": "roco",
+      "preis": "250.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "Werbung: Mystery Park 2002 Interlaken Switzerland"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 465",
+      "companyCode": "BLS",
+      "epoche": "V",
+      "bezeichnung": "Spalenberg",
+      "farbe": "blau",
+      "nummer": "Re 465 014-9",
+      "hersteller": "roco",
+      "preis": "250.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "bls Logo"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 465",
+      "companyCode": "BLS",
+      "epoche": "IV",
+      "bezeichnung": "Simplon / Sempione",
+      "farbe": "blau",
+      "nummer": "Re 465 001-6",
+      "hersteller": "märklin",
+      "preis": "250.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "BLS Logo"
+    }, {
+      "vehicleKind": "LOK",
+      "vehicleType": "Re 460",
+      "companyCode": "SBB",
+      "epoche": "V",
+      "bezeichnung": "Lavaux",
+      "farbe": "rot",
+      "nummer": "Re 460 006-6",
+      "hersteller": "märklin",
+      "preis": "250.00 CHF",
+      "anzahl": 1,
+      "bemerkung": "",
+      "lokType": "elektro"
+    }
+  ]
+}

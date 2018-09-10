@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "startDb": "json-server --watch eisenbahn.json --no-cors true --delay 750"
+
   },
   "private": true,
   "dependencies": {
@@ -44,5 +46,8 @@
     "protractor": "~5.3.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }
