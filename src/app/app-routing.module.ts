@@ -1,23 +1,23 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from "./components/home/home.component";
+import { HomeComponent } from './components/home/home.component';
 
 const appRoutes: Routes = [
   {
-    path: "home",
+    path: 'home',
     component: HomeComponent,
     children: [
       {
-        path: "locos",
-        loadChildren: "./features/locos/locos.module#LocosModule"
+        path: 'locos',
+        loadChildren: './features/locos/locos.module#LocosModule'
       }
     ]
   },
   {
-    path: "",
-    redirectTo: "/home",
-    pathMatch: "full"
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
   }
 ];
 

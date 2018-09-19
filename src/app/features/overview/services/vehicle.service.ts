@@ -40,7 +40,7 @@ export class VehicleService {
     return this._http.get<Vehicle[]>(`${this.ROOT_SERVICE_URL}/vehicles`).pipe(
       tap(vehicles => console.log('findAllPw.vehicles:', vehicles)),
       map(allVehicles => {
-        let list = allVehicles.filter(
+        const list = allVehicles.filter(
           vehicle => vehicle.vehicleKind === VehicleKind.PW
         );
         return list.sort((pw1, pw2) => pw1.nummer.localeCompare(pw2.nummer));
@@ -52,7 +52,7 @@ export class VehicleService {
     return this._http.get<Vehicle[]>(`${this.ROOT_SERVICE_URL}/vehicles`).pipe(
       tap(vehicles => console.log('findByKind.vehicles:', vehicles)),
       map(allVehicles => {
-        let list = allVehicles.filter(
+        const list = allVehicles.filter(
           vehicle => vehicle.vehicleKind === vehicleKind
         );
         return list.sort((pw1, pw2) => pw1.nummer.localeCompare(pw2.nummer));

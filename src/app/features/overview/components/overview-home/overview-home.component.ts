@@ -1,9 +1,8 @@
-import { VehicleKind } from './../../services/vehicle-kind.enum';
-import { VehicleService } from './../../services/vehicle.service';
-import { LokosService } from './../../services/lokos.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
+import { VehicleKind } from './../../services/vehicle-kind.enum';
+import { VehicleService } from './../../services/vehicle.service';
 import { DetailsService } from './../../services/details.service';
 import { Vehicle } from '../../models/vehicle.model';
 
@@ -16,8 +15,8 @@ export class OverviewHomeComponent implements OnInit {
   bahnList$: Observable<string[]>;
   locoList$: Observable<Vehicle[]>;
   gwList$: Observable<Vehicle[]>;
-  pwList$: Observable<Vehicle[]>; 
-  totalList$: Observable<Vehicle[]>; 
+  pwList$: Observable<Vehicle[]>;
+  totalList$: Observable<Vehicle[]>;
 
   constructor(
     private _detailServcie: DetailsService,

@@ -1,10 +1,13 @@
 {
-  "posts": [{
-    "id": 1,
-    "title": "json-server",
-    "author": "typicode"
-  }],
-  "comments": [{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
       "id": 1,
       "body": "some comment 1",
       "postId": 1
@@ -15,33 +18,57 @@
       "postId": 1
     }
   ],
-  "companies": [{
+  "companies": [
+    {
       "code": "SBB",
       "desc": "Schweizerische Bundes Bahn"
+    },
+    {
+      "code": "SBBC",
+      "desc": "SBB Cargo"
     },
     {
       "code": "BLS",
       "desc": "Bern Lötschber Simplon Bahn"
     },
     {
+      "code": "BLSC",
+      "desc": "BLS Cargo"
+    },
+    {
       "code": "DB",
       "desc": "Deutsche Bundesbahn"
+    },
+    {
+      "code": "SMB",
+      "desc": "Solothurn Münster Bahn"
+    },
+    {
+      "code": "VHB",
+      "desc": "Vereinigte Huttwiler Bahnen"
+    },
+    {
+      "code": "SOB",
+      "desc": "Südost Bahn"
     },
     {
       "code": "SNCF",
       "desc": "Franz. Staatsbahn"
     }
   ],
-  "epoche": [{
-    "I": "1900 - 1920",
-    "II": "1920 - 1950",
-    "III": "1950 - 1970",
-    "IV": "1970 - 1990",
-    "V": "1990 - 2000",
-    "VI": "2000 - 2010",
-    "VII": "2010 - today"
-  }],
-  "lokType": [{
+  "epoche": [
+    {
+      "I": "1900 - 1920",
+      "II": "1920 - 1950",
+      "III": "1950 - 1970",
+      "IV": "1970 - 1990",
+      "V": "1990 - 2000",
+      "VI": "2000 - 2010",
+      "VII": "2010 - today"
+    }
+  ],
+  "lokType": [
+    {
       "dampf": "Dampf"
     },
     {
@@ -51,22 +78,27 @@
       "elektro": "Elektro"
     }
   ],
-  "hersteller": [{
-    "roco": "Roco",
-    "liliput": "Liliput",
-    "jouef": "Jouef"
-  }],
-  "loks": [{
-    "lokType": "elektro",
-    "companyCode": "SBB",
-    "epoche": "VI",
-    "bezeichnung": "Re 4/4 II",
-    "nummer": "11128",
-    "hersteller": "roco",
-    "preis": "150.00 CHF",
-    "bemerkung": ""
-  }],
-  "vehicles": [{
+  "hersteller": [
+    {
+      "roco": "Roco",
+      "liliput": "Liliput",
+      "jouef": "Jouef"
+    }
+  ],
+  "loks": [
+    {
+      "lokType": "elektro",
+      "companyCode": "SBB",
+      "epoche": "VI",
+      "bezeichnung": "Re 4/4 II",
+      "nummer": "11128",
+      "hersteller": "roco",
+      "preis": "150.00 CHF",
+      "bemerkung": ""
+    }
+  ],
+  "vehicles": [
+    {
       "vehicleKind": "GW",
       "vehicleType": "Fals",
       "companyCode": "SBB",
@@ -91,7 +123,8 @@
       "preis": "100.00 CHF",
       "anzahl": 5,
       "bemerkung": "Transcéréales, mit Verpackung"
-    }, {
+    },
+    {
       "vehicleKind": "GW",
       "vehicleType": "Tgpps",
       "companyCode": "DB",
@@ -103,7 +136,8 @@
       "preis": "35.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung"
-    }, {
+    },
+    {
       "vehicleKind": "PW",
       "vehicleType": "WRm",
       "companyCode": "SBB",
@@ -115,7 +149,8 @@
       "preis": "55.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung"
-    }, {
+    },
+    {
       "vehicleKind": "PW",
       "vehicleType": "Bcm",
       "companyCode": "SBB",
@@ -127,7 +162,8 @@
       "preis": "55.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung"
-    }, {
+    },
+    {
       "vehicleKind": "PW",
       "vehicleType": "Bcm",
       "companyCode": "SBB",
@@ -139,7 +175,8 @@
       "preis": "55.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung"
-    }, {
+    },
+    {
       "vehicleKind": "PW",
       "vehicleType": "Bcm",
       "companyCode": "SBB",
@@ -151,7 +188,8 @@
       "preis": "55.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung"
-    }, {
+    },
+    {
       "vehicleKind": "PW",
       "vehicleType": "Bcm",
       "companyCode": "SBB",
@@ -163,7 +201,8 @@
       "preis": "55.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung"
-    }, {
+    },
+    {
       "vehicleKind": "PW",
       "vehicleType": "Bcm",
       "companyCode": "SBB",
@@ -175,7 +214,8 @@
       "preis": "55.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung"
-    }, {
+    },
+    {
       "vehicleKind": "PW",
       "vehicleType": "Bcm",
       "companyCode": "SBB",
@@ -187,7 +227,8 @@
       "preis": "55.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 6/6",
       "companyCode": "SBB",
@@ -199,7 +240,8 @@
       "preis": "300.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung, runde Lampen"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 6/6",
       "companyCode": "SBB",
@@ -211,7 +253,8 @@
       "preis": "300.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung, eckige Lampen"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 6/6",
       "companyCode": "SBB",
@@ -223,7 +266,8 @@
       "preis": "300.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung, eckige Lampen, Rangiergirffe"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 6/6",
       "companyCode": "SBB",
@@ -235,7 +279,8 @@
       "preis": "300.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung, eckige Lampen"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 6/6",
       "companyCode": "SBB",
@@ -247,7 +292,8 @@
       "preis": "300.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung, runde Lampen"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 6/6",
       "companyCode": "SBB",
@@ -259,7 +305,8 @@
       "preis": "300.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung, runde Lampen, zwei verschieden Wappen"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 6/6",
       "companyCode": "SBB",
@@ -271,7 +318,8 @@
       "preis": "300.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung, runde Lampen"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 6/6",
       "companyCode": "SBB",
@@ -283,7 +331,8 @@
       "preis": "300.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung, runde Lampen"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 6/6",
       "companyCode": "SBB",
@@ -295,7 +344,8 @@
       "preis": "300.00 CHF",
       "anzahl": 2,
       "bemerkung": "Mit Verpackung, eckige Lampen, Rangiergriffe"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 6/6",
       "companyCode": "SBB Cargo",
@@ -307,7 +357,8 @@
       "preis": "300.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung, eckige Lampen, Rangiergriffe, Cargo, zwei verschiedene Wappen"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 6/6",
       "companyCode": "SBB Cargo",
@@ -319,7 +370,8 @@
       "preis": "300.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung, eckige Lampen, Rangiergriffe, Cargo, zwei verschiedene Wappen"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 6/6",
       "companyCode": "SBB",
@@ -331,7 +383,8 @@
       "preis": "300.00 CHF",
       "anzahl": 1,
       "bemerkung": "Mit Verpackung, runde Lampen"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 6/6",
       "companyCode": "SBB",
@@ -343,7 +396,8 @@
       "preis": "200.00 CHF",
       "anzahl": 1,
       "bemerkung": "Runde Lampen"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 6/6",
       "companyCode": "SBB",
@@ -355,7 +409,8 @@
       "preis": "200.00 CHF",
       "anzahl": 1,
       "bemerkung": "Runde Lampen"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 465",
       "companyCode": "BLS",
@@ -367,7 +422,8 @@
       "preis": "200.00 CHF",
       "anzahl": 1,
       "bemerkung": "BLS Logo"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 460",
       "companyCode": "SBB",
@@ -379,7 +435,8 @@
       "preis": "250.00 CHF",
       "anzahl": 1,
       "bemerkung": ""
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 460",
       "companyCode": "SBB",
@@ -391,7 +448,8 @@
       "preis": "250.00 CHF",
       "anzahl": 1,
       "bemerkung": "Werbung: Zurich relax"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 460",
       "companyCode": "SBB",
@@ -403,7 +461,8 @@
       "preis": "250.00 CHF",
       "anzahl": 1,
       "bemerkung": "Werbung: Rutschi"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 465",
       "companyCode": "BLS",
@@ -415,7 +474,8 @@
       "preis": "250.00 CHF",
       "anzahl": 1,
       "bemerkung": "bls und EBT Logo"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 465",
       "companyCode": "BLS",
@@ -427,7 +487,8 @@
       "preis": "250.00 CHF",
       "anzahl": 1,
       "bemerkung": "BLS Logo"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 465",
       "companyCode": "BLS",
@@ -439,7 +500,8 @@
       "preis": "250.00 CHF",
       "anzahl": 1,
       "bemerkung": "Werbung: Mystery Park 2002 Interlaken Switzerland"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 465",
       "companyCode": "BLS",
@@ -451,7 +513,8 @@
       "preis": "250.00 CHF",
       "anzahl": 1,
       "bemerkung": "bls Logo"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 465",
       "companyCode": "BLS",
@@ -463,7 +526,8 @@
       "preis": "250.00 CHF",
       "anzahl": 1,
       "bemerkung": "BLS Logo"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 460",
       "companyCode": "SBB",
@@ -476,7 +540,8 @@
       "anzahl": 1,
       "bemerkung": "",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -489,7 +554,8 @@
       "anzahl": 1,
       "bemerkung": "TEE Farben",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -502,7 +568,8 @@
       "anzahl": 1,
       "bemerkung": "1. Serie mit Scherenstrom-Pantograph",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "BLS",
@@ -515,7 +582,8 @@
       "anzahl": 1,
       "bemerkung": "BLS PW Farbschema",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -528,7 +596,8 @@
       "anzahl": 1,
       "bemerkung": "1. Serie mit Scherenstrom-Pantograph, eckige Scheinwerfer",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -541,7 +610,8 @@
       "anzahl": 1,
       "bemerkung": "1. Serie mit Scherenstrom-Pantograph, runde Scheinwerfer",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -554,7 +624,8 @@
       "anzahl": 1,
       "bemerkung": "1. Serie mit Scherenstrom-Pantograph, eckige Scheinwerfer",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -567,7 +638,8 @@
       "anzahl": 1,
       "bemerkung": "Runde Scheinwerfer",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -580,7 +652,8 @@
       "anzahl": 1,
       "bemerkung": "Eckige Scheinwerfer, Klimaanlage",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -593,7 +666,8 @@
       "anzahl": 1,
       "bemerkung": "Ein Einholm-Pantograph, eckige Scheinwerfer, eckige Puffer",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -606,7 +680,8 @@
       "anzahl": 1,
       "bemerkung": "1. Serie mit Scherenstrom-Pantograph, runde Scheinwerfer",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -619,7 +694,8 @@
       "anzahl": 1,
       "bemerkung": "Runde Scheinwerfer",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 421",
       "companyCode": "SBBC",
@@ -632,7 +708,8 @@
       "anzahl": 1,
       "bemerkung": "Runde Scheinwerfer",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -645,7 +722,8 @@
       "anzahl": 1,
       "bemerkung": "TEE Farben",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -658,7 +736,8 @@
       "anzahl": 1,
       "bemerkung": "Wappen von Porrentruy, runde Lampen",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -671,7 +750,8 @@
       "anzahl": 2,
       "bemerkung": "runde Lampen",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -684,7 +764,8 @@
       "anzahl": 1,
       "bemerkung": "runde Lampen",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -697,7 +778,8 @@
       "anzahl": 1,
       "bemerkung": "Wappen von Porrentruy, runde Lampen",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 III",
       "companyCode": "SMB",
@@ -710,7 +792,8 @@
       "anzahl": 1,
       "bemerkung": "Runde Lampen, Wappen von ... auf Stirnfront",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -723,7 +806,8 @@
       "anzahl": 1,
       "bemerkung": "TEE Farben",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -736,7 +820,8 @@
       "anzahl": 1,
       "bemerkung": "Runde Lampen",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 III",
       "companyCode": "SOB",
@@ -749,7 +834,8 @@
       "anzahl": 1,
       "bemerkung": "Runde Lampen",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -762,7 +848,8 @@
       "anzahl": 1,
       "bemerkung": "Runde Scheinwerfer?",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -775,7 +862,8 @@
       "anzahl": 1,
       "bemerkung": "Eckige Scheinwerfer?",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -788,7 +876,8 @@
       "anzahl": 1,
       "bemerkung": "Eckige Scheinwerfer?",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 421",
       "companyCode": "SBBC",
@@ -801,7 +890,8 @@
       "anzahl": 1,
       "bemerkung": "Eckige Scheinwerfer",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
@@ -814,7 +904,8 @@
       "anzahl": 1,
       "bemerkung": "Eckige Scheinwerfer",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 III",
       "companyCode": "VHB",
@@ -827,7 +918,8 @@
       "anzahl": 2,
       "bemerkung": "Runde Scheinwerfer, Wappen von Luzern auf der Stirnfront",
       "lokType": "elektro"
-    }, {
+    },
+    {
       "vehicleKind": "LOK",
       "vehicleType": "Re 4/4 II",
       "companyCode": "SBB",
