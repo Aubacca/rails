@@ -13,23 +13,22 @@ import { Vehicle } from '../../models/vehicle.model';
   styleUrls: ['./overview-home.component.css']
 })
 export class OverviewHomeComponent implements OnInit {
-  detailList$: Observable<string[]>;
+  bahnList$: Observable<string[]>;
   locoList$: Observable<Vehicle[]>;
-  vehicles$: Observable<Vehicle[]>;
   gwList$: Observable<Vehicle[]>;
-  pwList$: Observable<Vehicle[]>;
+  pwList$: Observable<Vehicle[]>; 
+  totalList$: Observable<Vehicle[]>; 
 
   constructor(
     private _detailServcie: DetailsService,
-    private _locoService: LokosService,
     private _vehicleService: VehicleService
   ) {}
 
   ngOnInit() {
-    this.detailList$ = this._detailServcie.findByType();
+    this.bahnList$ = this._detailServcie.findByType();
     this.locoList$ = this._vehicleService.findByKind(VehicleKind.LOCO);
-    this.vehicles$ = this._vehicleService.findAll();
     this.pwList$ = this._vehicleService.findAllPw();
     this.gwList$ = this._vehicleService.findByKind(VehicleKind.GW);
+    this.totalList$ = this._vehicleService.findAll();
   }
 }

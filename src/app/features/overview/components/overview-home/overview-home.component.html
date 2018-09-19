@@ -1,4 +1,6 @@
-<h3>Homepage of the Overview (Home)!</h3>
+<h3>Homepage of the Overview</h3>
+
+<div>Total Anzahl der Fahrzeuge: {{ (totalList$ | async)?.length }}</div>
 
 <span>
   <rs-detail vehicleType="Lokomotiven" [detailList$]="locoList$"></rs-detail>
@@ -9,17 +11,8 @@
 <span>
   <rs-detail vehicleType="Personen Wagen" [detailList$]="pwList$"></rs-detail>
 </span>
-<!-- <hr>
-
-<span>
-  <rs-detail vehicleType="Lokomotive" [detailList$]="locoList$"></rs-detail>
-</span> -->
 
 <hr>
 <span>
-  <rs-detail vehicleType="Eisenbahn Gesellschaften" [detailList$]="detailList$"></rs-detail>
-</span>
-
-<span>
-  <rs-detail vehicleType="all Fahrzeuglist" [detailList$]="vehicles$"></rs-detail>
+  <rs-detail vehicleType="Eisenbahn Gesellschaften" [detailList$]="bahnList$"></rs-detail>
 </span>
