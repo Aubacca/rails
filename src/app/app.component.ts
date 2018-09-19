@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 import {
   Router,
   RouterEvent,
@@ -6,15 +6,15 @@ import {
   NavigationEnd,
   NavigationCancel,
   NavigationError
-} from "../../node_modules/@angular/router";
+} from '../../node_modules/@angular/router';
 
 @Component({
-  selector: "rs-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  selector: 'rs-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = "Sample Stock";
+  title = 'Sample Stock';
   isLoading: boolean;
 
   constructor(private _router: Router) {
@@ -24,7 +24,7 @@ export class AppComponent {
   }
 
   private checkRouterEvent(routerEvent: RouterEvent): void {
-    // throw new Error("Method not implemented.");
+    // throw new Error('Method not implemented.');
     if (routerEvent instanceof NavigationStart) {
       this.isLoading = true;
     }

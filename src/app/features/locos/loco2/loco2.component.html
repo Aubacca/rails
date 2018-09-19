@@ -1,0 +1,16 @@
+<h3>Liste alle Lokomotiven (mit Store)</h3>
+<hr>
+
+<ul>
+  <li *ngFor="let loc of myLocoList$ | async">
+    <div>
+      <b>{{ loc.vehicleType }} / {{ loc.nummer }}</b>
+      <div><small>{{ loc.companyCode }} {{ loc.bezeichnung }}</small></div>
+      <div><small>Epoche: {{ loc.epoche }}</small></div>
+    </div>
+    <div>
+      Hersteller: {{ loc.hersteller }}, Stück: {{ loc.anzahl }}
+      <div>Bemerkungen: {{ loc.bemerkung }}</div>
+    </div>
+  </li>
+</ul>
