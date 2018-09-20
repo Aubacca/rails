@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -12,7 +14,14 @@ import { RootStoreModule } from './root-store';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, OverviewModule, LocosModule, RootStoreModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    OverviewModule,
+    LocosModule,
+    RootStoreModule,
+    StoreDevtoolsModule.instrument({ maxAge: 80 })
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
