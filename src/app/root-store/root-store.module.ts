@@ -5,14 +5,16 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 
 import { MyLocoStoreModule } from './my-loco-store/my-loco-store.module';
+import { SpinnerStoreModule } from './spinner-store/spinner-store.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    MyLocoStoreModule,
     StoreModule.forRoot({}),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([]),
+    MyLocoStoreModule,
+    SpinnerStoreModule
   ],
   declarations: []
 })
-export class RootStoreModule { }
+export class RootStoreModule {}
