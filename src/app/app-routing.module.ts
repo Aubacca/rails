@@ -11,6 +11,10 @@ const appRoutes: Routes = [
       {
         path: 'locos',
         loadChildren: './features/locos/locos.module#LocosModule'
+      },
+      {
+        path: 'companies',
+        loadChildren: './features/companies/companies.module#CompaniesModule'
       }
     ]
   },

@@ -1,0 +1,10 @@
+<h3>Liste alle Verkehrsgesellschaften</h3>
+<hr>
+
+<ul>
+  <li *ngFor="let company of companyList$ | async">
+    <div>
+      <b>{{ company.code }}</b> / {{ company.desc }}
+    </div>
+  </li>
+</ul>
