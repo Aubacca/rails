@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { LocosRoutingModule } from './locos-routing.module';
 import { HomeComponent } from './home/home.component';
-import { Loco2Component } from './loco2/loco2.component';
+import { LocoStoreComponent } from './locoStore/locoStore.component';
 
 @NgModule({
   imports: [CommonModule, LocosRoutingModule],
-  declarations: [HomeComponent, Loco2Component]
+  declarations: [HomeComponent, LocoStoreComponent]
 })
 export class LocosModule {}
