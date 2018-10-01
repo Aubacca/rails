@@ -6,10 +6,11 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { OverviewModule } from './features/overview/overview.module';
-import { LocosModule } from './features/locos/locos.module';
 import { HomeComponent } from './components/home/home.component';
+import { OverviewModule } from './features/overview/overview.module';
 // import { RootStoreModule } from './root-store/root-store.module';
+import { LocosModule } from './features/locos/locos.module';
+import { SpinnerStoreModule } from './root-store/spinner-store';
 import { RootStoreModule } from './root-store';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { RootStoreModule } from './root-store';
     AppRoutingModule,
     OverviewModule,
     LocosModule,
+    SpinnerStoreModule,
     RootStoreModule,
     StoreDevtoolsModule.instrument({ maxAge: 80 })
   ],

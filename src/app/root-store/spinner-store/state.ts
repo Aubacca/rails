@@ -3,7 +3,4 @@ export interface State {
   actionsInProgress: any[];
 }
 
-export const initialState: State = {
-  active: 0,
-  actionsInProgress: []
-};
+export const initialState: State = { active: 0, actionsInProgress: [] };

@@ -11,7 +11,10 @@
   <a [routerLink]="['/locos']" routerLinkActive="active"> * Locos </a>
   <a [routerLink]="['/locos/locoState']" routerLinkActive="active"> * Locos State </a>
 </nav>
-<hr> Is Loading data: {{ isLoading }}
+<hr>
+<span>Is Loading data: {{ isLoadingAsBoolean }}</span>
+&nbsp;
+<span>Is Loading by store: {{ isLoading | async }}</span>
 
 <router-outlet></router-outlet>
 

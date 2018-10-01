@@ -7,6 +7,10 @@ import {
   NavigationCancel,
   NavigationError
 } from '../../node_modules/@angular/router';
+import { Observable } from 'rxjs';
+import { Store, select } from '@ngrx/store';
+import { RootStoreState } from 'src/app/root-store';
+import { isLoadingSpinnerActive } from './root-store/spinner-store/selectors';
 
 @Component({
   selector: 'rs-root',
@@ -15,18 +19,24 @@ import {
 })
 export class AppComponent {
   title = 'Sample Stock';
-  isLoading: boolean;
+  isLoadingAsBoolean: boolean;
+  isLoading: Observable<boolean>;
 
-  constructor(private _router: Router) {
+  constructor(
+    private _router: Router,
+    private _store$: Store<RootStoreState.RootState>
+  ) {
     _router.events.subscribe((routerEvent: RouterEvent) => {
       this.checkRouterEvent(routerEvent);
     });
+    //
+    this.isLoading = this._store$.pipe(select(isLoadingSpinnerActive));
   }
 
   private checkRouterEvent(routerEvent: RouterEvent): void {
     // throw new Error('Method not implemented.');
     if (routerEvent instanceof NavigationStart) {
-      this.isLoading = true;
+      this.isLoadingAsBoolean = true;
     }
 
     if (
@@ -35,7 +45,7 @@ export class AppComponent {
       routerEvent instanceof NavigationError
     ) {
       setTimeout(() => {
-        this.isLoading = false;
+        this.isLoadingAsBoolean = false;
       }, 1000);
     }
   }
