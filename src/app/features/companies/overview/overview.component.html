@@ -1,6 +1,18 @@
-<h3>Liste alle Verkehrsgesellschaften</h3>
-<hr>
+<div *ngIf="(storeCompanyList$ | async).length">
+  <h3>Liste alle Verkehrsgesellschaften</h3>
+  <hr>
+  <h3>Companies from Store</h3>
+  <ul>
+    <li *ngFor="let company of storeCompanyList$ | async">
+      <div>
+        <b>{{ company.code }}</b> / {{ company.desc }}
+      </div>
+    </li>
+  </ul>
+</div>
 
+<hr>
+<h3>Companies from service</h3>
 <ul>
   <li *ngFor="let company of companyList$ | async">
     <div>
