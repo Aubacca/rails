@@ -1,5 +1,5 @@
 import { CompanyActionTypes, CompanyActions } from './company.actions';
-import { State, initialState } from './company.store';
+import { State, initialState } from './company.state';
 
 export function companyReducer(
   state = initialState,

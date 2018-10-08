@@ -13,6 +13,7 @@ import { LocosModule } from './features/locos/locos.module';
 import { SpinnerStoreModule } from './root-store/spinner-store';
 import { RootStoreModule } from './root-store';
 import { CompaniesModule } from './features/companies/companies.module';
+import { PwsModule } from './features/pws/pws.module';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -24,7 +25,8 @@ import { CompaniesModule } from './features/companies/companies.module';
     SpinnerStoreModule,
     RootStoreModule,
     StoreDevtoolsModule.instrument({ maxAge: 80 }),
-    CompaniesModule
+    CompaniesModule,
+    PwsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

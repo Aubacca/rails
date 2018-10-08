@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
 
-import { Vehicle } from './../models/vehicle.model';
 import { VehicleKind } from './vehicle-kind.enum';
 
 @Injectable({

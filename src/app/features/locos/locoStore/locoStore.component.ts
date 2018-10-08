@@ -1,14 +1,13 @@
-import { VehicleKind } from '../../overview/services/vehicle-kind.enum';
 import { Component, OnInit } from '@angular/core';
-
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { Vehicle } from '../../overview/models/vehicle.model';
+import { VehicleKind } from '../../overview/services/vehicle-kind.enum';
+
 import {
   RootStoreState,
-  MyLocoStoreActions,
-  MyLocoStoreSelectors
+  LocoStoreActions,
+  LocoStoreSelectors
 } from '../../../root-store';
 
 @Component({
@@ -29,11 +28,11 @@ export class LocoStoreComponent implements OnInit {
 
   private init() {
     this.myLocoList$ = this.store$.pipe(
-      select(MyLocoStoreSelectors.selectMyLocoLocoList)
+      select(LocoStoreSelectors.selectMyLocoLocoList)
     );
 
     this.error$ = this.store$.pipe(
-      select(MyLocoStoreSelectors.selectMyFeatureError)
+      select(LocoStoreSelectors.selectMyFeatureError)
     );
 
     // this.isLoading$ = this.store$.select(
@@ -41,7 +40,7 @@ export class LocoStoreComponent implements OnInit {
     // );
 
     this.store$.dispatch(
-      new MyLocoStoreActions.GetLocos({ vehicleKind: VehicleKind.LOCO })
+      new LocoStoreActions.GetLocos({ vehicleKind: VehicleKind.LOCO })
     );
   }
 }

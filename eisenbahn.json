@@ -1,13 +1,10 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
+  "posts": [{
+    "id": 1,
+    "title": "json-server",
+    "author": "typicode"
+  }],
+  "comments": [{
       "id": 1,
       "body": "some comment 1",
       "postId": 1
@@ -18,8 +15,7 @@
       "postId": 1
     }
   ],
-  "companies": [
-    {
+  "companies": [{
       "code": "SBB",
       "desc": "Schweizerische Bundes Bahn"
     },
@@ -56,19 +52,16 @@
       "desc": "Franz. Staatsbahn"
     }
   ],
-  "epoche": [
-    {
-      "I": "1900 - 1920",
-      "II": "1920 - 1950",
-      "III": "1950 - 1970",
-      "IV": "1970 - 1990",
-      "V": "1990 - 2000",
-      "VI": "2000 - 2010",
-      "VII": "2010 - today"
-    }
-  ],
-  "lokType": [
-    {
+  "epoche": [{
+    "I": "1900 - 1920",
+    "II": "1920 - 1950",
+    "III": "1950 - 1970",
+    "IV": "1970 - 1990",
+    "V": "1990 - 2000",
+    "VI": "2000 - 2010",
+    "VII": "2010 - today"
+  }],
+  "lokType": [{
       "dampf": "Dampf"
     },
     {
@@ -78,27 +71,22 @@
       "elektro": "Elektro"
     }
   ],
-  "hersteller": [
-    {
-      "roco": "Roco",
-      "liliput": "Liliput",
-      "jouef": "Jouef"
-    }
-  ],
-  "loks": [
-    {
-      "lokType": "elektro",
-      "companyCode": "SBB",
-      "epoche": "VI",
-      "bezeichnung": "Re 4/4 II",
-      "nummer": "11128",
-      "hersteller": "roco",
-      "preis": "150.00 CHF",
-      "bemerkung": ""
-    }
-  ],
-  "vehicles": [
-    {
+  "hersteller": [{
+    "roco": "Roco",
+    "liliput": "Liliput",
+    "jouef": "Jouef"
+  }],
+  "loks": [{
+    "lokType": "elektro",
+    "companyCode": "SBB",
+    "epoche": "VI",
+    "bezeichnung": "Re 4/4 II",
+    "nummer": "11128",
+    "hersteller": "roco",
+    "preis": "150.00 CHF",
+    "bemerkung": ""
+  }],
+  "vehicles": [{
       "vehicleKind": "GW",
       "vehicleType": "Fals",
       "companyCode": "SBB",
@@ -932,6 +920,138 @@
       "anzahl": 1,
       "bemerkung": "TEE Farben",
       "lokType": "elektro"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "A",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "EW II",
+      "farbe": "grün",
+      "nummer": "50 85 18-34 570-0",
+      "hersteller": "roco",
+      "preis": "25 CHF",
+      "anzahl": 6,
+      "bemerkung": "Neues SBB Logo, Konfort Steifen"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "A",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "EW II",
+      "farbe": "grün",
+      "nummer": "50 85 18-34 563-5",
+      "hersteller": "roco",
+      "preis": "25 CHF",
+      "anzahl": 1,
+      "bemerkung": "Neues SBB Logo, Konfort Steifen"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "B",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "EW II",
+      "farbe": "grün",
+      "nummer": "50 85 20-34 642-2",
+      "hersteller": "roco",
+      "preis": "25 CHF",
+      "anzahl": 2,
+      "bemerkung": "Neues SBB Logo, Konfort Steifen"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "A",
+      "companyCode": "SBB",
+      "epoche": "III",
+      "bezeichnung": "EW II",
+      "farbe": "grün",
+      "nummer": "50 85 18-33 582-5",
+      "hersteller": "roco",
+      "preis": "25 CHF",
+      "anzahl": 2,
+      "bemerkung": "Altes SBB Logo"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "B",
+      "companyCode": "SBB",
+      "epoche": "III",
+      "bezeichnung": "EW II",
+      "farbe": "grün",
+      "nummer": "50 85 20-34 684-4",
+      "hersteller": "roco",
+      "preis": "25 CHF",
+      "anzahl": 5,
+      "bemerkung": "Altes SBB Logo"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "D",
+      "companyCode": "SBB",
+      "epoche": "III",
+      "bezeichnung": "EW II",
+      "farbe": "grün",
+      "nummer": "50 85 92-33 645-9",
+      "hersteller": "roco",
+      "preis": "25 CHF",
+      "anzahl": 1,
+      "bemerkung": "Altes SBB Logo"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "D",
+      "companyCode": "SBB",
+      "epoche": "III",
+      "bezeichnung": "EW II",
+      "farbe": "grün",
+      "nummer": "50 85 92-33 686-3",
+      "hersteller": "roco",
+      "preis": "25 CHF",
+      "anzahl": 1,
+      "bemerkung": "Neues SBB Logo"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "A",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "EW II",
+      "farbe": "grün",
+      "nummer": "50 85 18-33 573-4",
+      "hersteller": "roco",
+      "preis": "25 CHF",
+      "anzahl": 1,
+      "bemerkung": "Neues SBB Logo"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "B",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "EW II",
+      "farbe": "grün",
+      "nummer": "50 85 20-34 551-5",
+      "hersteller": "roco",
+      "preis": "25 CHF",
+      "anzahl": 7,
+      "bemerkung": "Neues SBB Logo, Konfort Steifen"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "Z",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "EW II",
+      "farbe": "grün",
+      "nummer": "50 85 00-33 940-5",
+      "hersteller": "roco",
+      "preis": "25 CHF",
+      "anzahl": 1,
+      "bemerkung": "Neues SBB Logo"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "B",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "EW II",
+      "farbe": "grün",
+      "nummer": "50 85 20-34 596-0",
+      "hersteller": "roco",
+      "preis": "25 CHF",
+      "anzahl": 2,
+      "bemerkung": "Neues SBB Logo, Konfort Steifen"
     }
   ]
 }
