@@ -1,5 +1,5 @@
 export interface State {
-  companyList: Company[];
+  companyList: Company[] | null;
   error: any;
 }
 

@@ -8,6 +8,7 @@ interface RootObject {
 }
 
 interface Vehicle {
+  vehicleKind: string;
   vehicleType: string;
   companyCode: string;
   epoche: string;

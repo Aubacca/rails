@@ -1,4 +1,4 @@
-export interface Vehicle {
+export interface VehicleOld {
   vehicleKind: string;
   vehicleType: string;
   companyCode: string;

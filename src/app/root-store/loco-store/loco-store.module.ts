@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { MyLocoStoreEffects } from './effects';
-import { featureReducer } from './reducer';
+import { MyLocoStoreEffects } from './loco.effects';
+import { featureReducer } from './loco.reducer';
 
 @NgModule({
   imports: [
@@ -14,4 +14,4 @@ import { featureReducer } from './reducer';
   ],
   providers: [MyLocoStoreEffects]
 })
-export class MyLocoStoreModule { }
+export class LocoStoreModule {}

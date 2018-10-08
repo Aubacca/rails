@@ -1,12 +1,10 @@
 import {
-    createFeatureSelector,
-    createSelector,
-    MemoizedSelector
+  createFeatureSelector,
+  createSelector,
+  MemoizedSelector
 } from '@ngrx/store';
 
-import { Vehicle } from './../../features/overview/models/vehicle.model';
-
-import { State } from './state';
+import { State } from './loco.state';
 
 const getError = (state: State): any => state.error;
 

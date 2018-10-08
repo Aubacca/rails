@@ -4,7 +4,7 @@ import {
   createSelector
 } from '@ngrx/store';
 
-import { State } from './company.store';
+import { State } from './company.state';
 
 const getError = (state: State): any => state.error;
 

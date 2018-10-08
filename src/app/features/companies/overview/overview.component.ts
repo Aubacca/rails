@@ -7,7 +7,6 @@ import {
   CompanySelectors,
   CompanyActions
 } from 'src/app/root-store';
-import { CompaniesService } from './../services/companies.service';
 
 @Component({
   selector: 'rs-overview',
@@ -16,22 +15,16 @@ import { CompaniesService } from './../services/companies.service';
 })
 export class OverviewComponent implements OnInit {
   companyList$: Observable<Company[]>;
-  storeCompanyList$: Observable<Company[]>;
 
-  constructor(
-    private companyService$: CompaniesService,
-    private _store$: Store<RootStoreState.RootState>
-  ) {}
+  constructor(private _store$: Store<RootStoreState.RootState>) {}
 
   ngOnInit() {
     this.init();
   }
 
   private init() {
-    this.companyList$ = this.companyService$.findAll();
-    //
     // Get company list from store via selector.
-    this.storeCompanyList$ = this._store$.pipe(
+    this.companyList$ = this._store$.pipe(
       select(CompanySelectors.selectCompanyList)
     );
     // Load company list from store.

@@ -1,5 +1,3 @@
-import { Vehicle } from './../../features/overview/models/vehicle.model';
-
 export interface State {
   locoList: Vehicle[] | null;
   isLoading: boolean;
@@ -7,7 +5,7 @@ export interface State {
 }
 
 export const initialState: State = {
-  locoList: null,
+  locoList: [],
   isLoading: false,
   error: null
 };

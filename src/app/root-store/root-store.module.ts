@@ -5,7 +5,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 
 import { CompanyModule } from './company-store/company.module';
-import { MyLocoStoreModule } from './my-loco-store/my-loco-store.module';
+import { LocoStoreModule } from './loco-store/loco-store.module';
+import { PwModule } from './pw-store/pw.module';
 import { SpinnerStoreModule } from './spinner-store/spinner-store.module';
 
 @NgModule({
@@ -13,8 +14,9 @@ import { SpinnerStoreModule } from './spinner-store/spinner-store.module';
     CommonModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
-    MyLocoStoreModule,
+    LocoStoreModule,
     CompanyModule,
+    PwModule,
     SpinnerStoreModule
   ],
   declarations: []

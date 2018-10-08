@@ -15,6 +15,10 @@ const appRoutes: Routes = [
       {
         path: 'companies',
         loadChildren: './features/companies/companies.module#CompaniesModule'
+      },
+      {
+        path: 'pwagen',
+        loadChildren: './features/pws/pws.module#PwsModule'
       }
     ]
   },
