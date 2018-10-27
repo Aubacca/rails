@@ -3,15 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { MyLocoStoreEffects } from './loco.effects';
-import { featureReducer } from './loco.reducer';
+import { LocoStoreEffects } from './loco.effects';
+import { locoReducer } from './loco.reducer';
 
 @NgModule({
   imports: [
     CommonModule,
-    StoreModule.forFeature('myLoco', featureReducer),
-    EffectsModule.forFeature([MyLocoStoreEffects])
+    StoreModule.forFeature('loco', locoReducer),
+    EffectsModule.forFeature([LocoStoreEffects])
   ],
-  providers: [MyLocoStoreEffects]
+  providers: [LocoStoreEffects]
 })
 export class LocoStoreModule {}

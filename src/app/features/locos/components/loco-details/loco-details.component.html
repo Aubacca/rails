@@ -1,0 +1,33 @@
+<h3>Lokomotive Details</h3>
+
+<div *ngFor="let locoDetail of locoDetails$ | async">
+  <div> Typ/Nummer: <b>{{ locoDetail.vehicleType }} - {{ locoDetail.nummer}}</b> </div>
+  <div> Farbe: <b>{{ locoDetail.farbe}}</b> </div>
+  <div> Gesellschaft: <b>{{ locoDetail.companyCode}}</b> </div>
+  <div> Bemerkung: <b>{{ locoDetail.bemerkung}}</b> </div>
+  <div> Hersteller: <b>{{ locoDetail.hersteller}}</b> </div>
+</div>
+
+{{ myLocoDetail$ | async | json }}
+
+<!--
+<div *ngIf="(locoDetails$ | async)?.length">
+  <h4>{{( locoDetails$ | async)?.vehicleType }}</h4>
+</div> -->
+<hr>
+<h3>Reactive Form (via Service)</h3>
+<div *ngFor="let locoDetail of locoDetails$ | async">
+  <form (ngSubmit)="onSubmit()">
+    <div [formGroup]="newLocoForm">
+      <div>Loktyp: <input matInput placeholder="Loktyp" formControlName="lokType" /></div>
+      <div>Nummer: <input matInput placeholder="Loknummer" formControlName="nummer" [value]="locoDetail.nummer" /></div>
+      <div>Firma: <input matInput placeholder="Company code" formControlName="companyCode" [value]="locoDetail.companyCode" /></div>
+      <div>Epoche: <input matInput placeholder="Epoche" formControlName="epoche" [value]="locoDetail.epoche" /></div>
+      <div>Hersteller: <input matInput placeholder="Hersteller" formControlName="hersteller" [value]="locoDetail.hersteller" /></div>
+      <div>Preis: <input matInput placeholder="Preis" formControlName="preis" [value]="locoDetail.preis" /></div>
+      <div>Bemerkung: <input matInput placeholder="Bezeichnung" formControlName="bezeichnung" [value]="locoDetail.bemerkung" /></div>
+    </div>
+
+    <button type="submit">Save</button>
+  </form>
+</div>

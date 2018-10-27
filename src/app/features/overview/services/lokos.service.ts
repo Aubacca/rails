@@ -9,12 +9,24 @@ import { tap, catchError } from 'rxjs/operators';
 export class LokosService {
   constructor(private _http: HttpClient) {}
 
-  public findAll(): Observable<any> {
+  public findAll(): Observable<Vehicle[]> {
     console.log('LokosService.findAll>begin');
-    return this._http.get('http://localhost:3000/loks').pipe(
+    return this._http.get<Vehicle[]>('http://localhost:3000/loks').pipe(
       tap(data => console.log('data:', data)),
       catchError(this.handleError('findAll', []))
     );
+  }
+
+  public findByNumber(locoNumber: string): Observable<Vehicle> {
+    console.log('LokosService.findByNumber>begin: locoNumber=', locoNumber);
+    return this._http
+      .get<Vehicle>(
+        `http://localhost:3000/vehicles?vehicleKind=LOK&nummer=${locoNumber}`
+      )
+      .pipe(
+        tap(data => console.log('LokosService.findByNumber>data:', data)),
+        catchError(this.handleError('findByNumber', null))
+      );
   }
 
   /**

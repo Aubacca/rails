@@ -9,6 +9,10 @@ const appRoutes: Routes = [
     component: HomeComponent,
     children: [
       {
+        path: 'overview',
+        loadChildren: './features/overview/overview.module#OverviewModule'
+      },
+      {
         path: 'locos',
         loadChildren: './features/locos/locos.module#LocosModule'
       },

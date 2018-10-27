@@ -118,5 +118,8 @@
       }
     }
   },
-  "defaultProject": "rail-stock"
+  "defaultProject": "rail-stock",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

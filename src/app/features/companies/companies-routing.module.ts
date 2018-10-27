@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { OverviewComponent } from 'src/app/features/companies/overview/overview.component';
+import { CompanyListComponent } from './containers/company-list/company-list.component';
 
 const routes: Routes = [
   {
     path: 'companies',
-    children: [{ path: '', component: OverviewComponent }]
+    children: [{ path: '', component: CompanyListComponent }]
   }
 ];
 

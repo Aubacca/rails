@@ -1,12 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { LocosRoutingModule } from './locos-routing.module';
-import { HomeComponent } from './home/home.component';
-import { LocoStoreComponent } from './locoStore/locoStore.component';
+import { SharedModule } from '../shared/shared.module';
+import { HomeComponent } from './components/home/home.component';
+import { LocosComponent } from './containers/loco-list/locos.component';
+import { LocoDetailsComponent } from './components/loco-details/loco-details.component';
 
 @NgModule({
-  imports: [CommonModule, LocosRoutingModule],
-  declarations: [HomeComponent, LocoStoreComponent]
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    LocosRoutingModule,
+    SharedModule
+  ],
+  declarations: [HomeComponent, LocosComponent, LocoDetailsComponent]
 })
 export class LocosModule {}

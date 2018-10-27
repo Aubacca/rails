@@ -7,6 +7,7 @@ import { StoreModule } from '@ngrx/store';
 import { CompanyModule } from './company-store/company.module';
 import { LocoStoreModule } from './loco-store/loco-store.module';
 import { PwModule } from './pw-store/pw.module';
+import { GwModule } from './gws-store/gw.module';
 import { SpinnerStoreModule } from './spinner-store/spinner-store.module';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { SpinnerStoreModule } from './spinner-store/spinner-store.module';
     LocoStoreModule,
     CompanyModule,
     PwModule,
+    GwModule,
     SpinnerStoreModule
   ],
   declarations: []

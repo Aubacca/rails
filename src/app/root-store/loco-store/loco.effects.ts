@@ -7,10 +7,15 @@ import { catchError, map, switchMap, debounceTime } from 'rxjs/operators';
 import * as locoActions from './loco.actions';
 import { VehicleService } from '../../features/overview/services/vehicle.service';
 import { VehicleKind } from '../../features/overview/services/vehicle-kind.enum';
+import { LokosService } from 'src/app/features/overview/services/lokos.service';
 
 @Injectable()
-export class MyLocoStoreEffects {
-  constructor(private dataService: VehicleService, private actions$: Actions) {}
+export class LocoStoreEffects {
+  constructor(
+    private dataService: VehicleService,
+    private _locoService: LokosService,
+    private actions$: Actions
+  ) {}
 
   @Effect()
   loadRequestEffect$: Observable<Action> = this.actions$.pipe(
@@ -21,6 +26,20 @@ export class MyLocoStoreEffects {
         map(locos => new locoActions.GetLocosSuccess({ vehicleList: locos })),
         catchError(error =>
           observableOf(new locoActions.GetLocosFailure({ error }))
+        )
+      )
+    )
+  );
+
+  @Effect()
+  loadLocoOne$: Observable<Action> = this.actions$.pipe(
+    ofType<locoActions.GetLocoOne>(locoActions.LocoActionTypes.GET_LOCO_ONE),
+    switchMap(action =>
+      this._locoService.findByNumber(action.payload.nummer).pipe(
+        debounceTime(3000),
+        map(loco => new locoActions.GetLocoOneSuccess({ vehicle: loco })),
+        catchError(error =>
+          observableOf(new locoActions.GetLocoOneFailure({ error }))
         )
       )
     )
