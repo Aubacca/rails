@@ -21,4 +21,4 @@ export class LoadPwsFailure implements Action {
   constructor(public payload: { error: string }) {}
 }
 
-export type PwActions = LoadPws | LoadPwsFailure | LoadPwsSuccess;
+export type PwActions = LoadPws | LoadPwsSuccess | LoadPwsFailure;

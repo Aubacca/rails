@@ -1,0 +1,12 @@
+<h3>{{ pageTitle }}</h3>
+
+<div *ngIf="(companyList$ | async).length">
+  <hr>
+  <ul>
+    <li *ngFor="let company of companyList$ | async">
+      <div>
+        <b>{{ company.code }}</b> / {{ company.desc }}
+      </div>
+    </li>
+  </ul>
+</div>

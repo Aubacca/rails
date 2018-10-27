@@ -1,0 +1,10 @@
+<h3>{{ pageTitle }}</h3>
+
+<hr *ngIf="(vehicleList$ | async)?.length > 0">
+<ul>
+  <li *ngFor="let vehicle of vehicleList$ | async"><b>{{ vehicle.vehicleType }} - {{ vehicle.nummer }}</b> {{
+    vehicle.companyCode }} :
+    {{ vehicle.bezeichnung }}, Epoche: {{ vehicle.epoche }}, Hersteller: {{ vehicle.hersteller }}, Stück: {{
+    vehicle.anzahl }},
+    Bemerkungen: {{ vehicle.bemerkung }}</li>
+</ul>

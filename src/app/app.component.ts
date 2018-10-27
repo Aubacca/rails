@@ -30,7 +30,7 @@ export class AppComponent {
       this.checkRouterEvent(routerEvent);
     });
     //
-    this.isLoading = this._store$.pipe(select(isLoadingSpinnerActive));
+    // this.isLoading = this._store$.pipe(select(isLoadingSpinnerActive));
   }
 
   private checkRouterEvent(routerEvent: RouterEvent): void {

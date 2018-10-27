@@ -1,23 +1,26 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div style=" font-family: 'Montserrat', sans-serif;">
+  <!--The content below is only a placeholder and can be replaced.-->
+  <div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  </div>
+
+  <nav>
+    <a [routerLink]="['/home']" routerLinkActive="active"> * Home </a>
+    <a routerLink="/overview" routerLinkActive="active"> * Overview </a>
+    <a [routerLink]="['/locos']" routerLinkActive="active"> * Locos </a>
+    <a [routerLink]="['/locos/locoState']" routerLinkActive="active"> * Locos State </a>
+    <a [routerLink]="['/companies']" routerLinkActive="active"> * Companies</a>
+    <a [routerLink]="['/pwagen']" routerLinkActive="active"> * Personenwagen</a>
+    <a [routerLink]="['/gwagen']" routerLinkActive="active"> * Güterwagen</a>
+  </nav>
+  <hr>
+  <span>Is Loading data: {{ isLoadingAsBoolean }}</span>
+  &nbsp;
+  <span>Is Loading by store: {{ isLoading | async }}</span>
+
+  <router-outlet></router-outlet>
+
+  <hr>
 </div>
-
-<nav>
-  <a [routerLink]="['/home']" routerLinkActive="active"> * Home </a>
-  <a routerLink="/overview" routerLinkActive="active"> * Overview </a>
-  <a [routerLink]="['/locos']" routerLinkActive="active"> * Locos </a>
-  <a [routerLink]="['/locos/locoState']" routerLinkActive="active"> * Locos State </a>
-  <a [routerLink]="['/companies']" routerLinkActive="active"> * Companies</a>
-  <a [routerLink]="['/pwagen']" routerLinkActive="active"> * Personenwagen</a>
-</nav>
-<hr>
-<span>Is Loading data: {{ isLoadingAsBoolean }}</span>
-&nbsp;
-<span>Is Loading by store: {{ isLoading | async }}</span>
-
-<router-outlet></router-outlet>
-
-<hr>

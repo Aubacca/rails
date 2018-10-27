@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { OverviewComponent } from 'src/app/features/pws/overview/overview/overview.component';
+import { PwListComponent } from './container/pw-list/pw-list.component';
 
 const routes: Routes = [
   {
     path: 'pwagen',
-    children: [{ path: '', component: OverviewComponent }]
+    children: [{ path: '', component: PwListComponent }]
   }
 ];
 

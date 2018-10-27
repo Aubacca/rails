@@ -978,7 +978,7 @@
       "nummer": "50 85 20-34 684-4",
       "hersteller": "roco",
       "preis": "25 CHF",
-      "anzahl": 5,
+      "anzahl": 6,
       "bemerkung": "Altes SBB Logo"
     }, {
       "vehicleKind": "PW",
@@ -1018,6 +1018,30 @@
       "bemerkung": "Neues SBB Logo"
     }, {
       "vehicleKind": "PW",
+      "vehicleType": "A",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "EW II",
+      "farbe": "grün",
+      "nummer": "50 85 18-33 587-4",
+      "hersteller": "roco",
+      "preis": "32 CHF",
+      "anzahl": 2,
+      "bemerkung": "Neues SBB Logo"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "AB",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "EW II",
+      "farbe": "grün",
+      "nummer": "50 85 39-33 585-3",
+      "hersteller": "roco",
+      "preis": "32 CHF",
+      "anzahl": 1,
+      "bemerkung": "Neues SBB Logo"
+    }, {
+      "vehicleKind": "PW",
       "vehicleType": "B",
       "companyCode": "SBB",
       "epoche": "IV",
@@ -1028,6 +1052,30 @@
       "preis": "25 CHF",
       "anzahl": 7,
       "bemerkung": "Neues SBB Logo, Konfort Steifen"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "B",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "EW II",
+      "farbe": "grün",
+      "nummer": "50 85 20-34 515-0",
+      "hersteller": "roco",
+      "preis": "32 CHF",
+      "anzahl": 1,
+      "bemerkung": "Neues SBB Logo"
+    }, {
+      "vehicleKind": "PW",
+      "vehicleType": "B",
+      "companyCode": "SBB",
+      "epoche": "IV",
+      "bezeichnung": "EW II",
+      "farbe": "grün",
+      "nummer": "50 85 20-34 511-9",
+      "hersteller": "roco",
+      "preis": "32 CHF",
+      "anzahl": 2,
+      "bemerkung": "Neues SBB Logo"
     }, {
       "vehicleKind": "PW",
       "vehicleType": "Z",
@@ -1041,6 +1089,42 @@
       "anzahl": 1,
       "bemerkung": "Neues SBB Logo"
     }, {
+      "vehicleKind": "GW",
+      "vehicleType": "Habbiillnss",
+      "companyCode": "SBB",
+      "epoche": "VI",
+      "bezeichnung": "Bahnpost Grossraum-Schiebewandwagen",
+      "farbe": "gelb",
+      "nummer": "33 85 2891 013-0",
+      "hersteller": "mäerklin",
+      "preis": "25 CHF",
+      "anzahl": 1,
+      "bemerkung": "Neues Post Logo"
+    }, {
+      "vehicleKind": "GW",
+      "vehicleType": "Habbiillnss",
+      "companyCode": "SBB",
+      "epoche": "VI",
+      "bezeichnung": "Bahnpost Grossraum-Schiebewandwagen",
+      "farbe": "gelb",
+      "nummer": "33 85 2891 025-4",
+      "hersteller": "mäerklin",
+      "preis": "25 CHF",
+      "anzahl": 1,
+      "bemerkung": "Neues Post Logo"
+    }, {
+      "vehicleKind": "GW",
+      "vehicleType": "Habbiillnss",
+      "companyCode": "SBB",
+      "epoche": "VI",
+      "bezeichnung": "Bahnpost Grossraum-Schiebewandwagen",
+      "farbe": "gelb",
+      "nummer": "33 85 2891 051-0",
+      "hersteller": "mäerklin",
+      "preis": "25 CHF",
+      "anzahl": 1,
+      "bemerkung": "Neues Post Logo"
+    }, {
       "vehicleKind": "PW",
       "vehicleType": "B",
       "companyCode": "SBB",
@@ -1052,6 +1136,58 @@
       "preis": "25 CHF",
       "anzahl": 2,
       "bemerkung": "Neues SBB Logo, Konfort Steifen"
+    }, {
+      "vehicleKind": "GW",
+      "vehicleType": "Uce",
+      "companyCode": "RhB",
+      "epoche": "IV",
+      "bezeichnung": "Uce",
+      "farbe": "silber",
+      "nummer": "8011",
+      "hersteller": "bemo",
+      "preis": "20 CHF",
+      "anzahl": 1,
+      "bemerkung": "Altes RhB Logo, blaue Rohrleitungen",
+      "kaufdatum": 1539521170217
+    }, {
+      "vehicleKind": "GW",
+      "vehicleType": "Uce",
+      "companyCode": "RhB",
+      "epoche": "IV",
+      "bezeichnung": "Uce",
+      "farbe": "silber",
+      "nummer": "8026",
+      "hersteller": "bemo",
+      "preis": "20 CHF",
+      "anzahl": 1,
+      "bemerkung": "Altes RhB Logo, blaue Rohrleitungen",
+      "kaufdatum": 1539521170217
+    }, {
+      "vehicleKind": "GW",
+      "vehicleType": "Uce",
+      "companyCode": "RhB",
+      "epoche": "IV",
+      "bezeichnung": "Uce",
+      "farbe": "silber",
+      "nummer": "8027",
+      "hersteller": "bemo",
+      "preis": "20 CHF",
+      "anzahl": 1,
+      "bemerkung": "Altes RhB Logo überklabt mit 'Am besten Beton', blaue Rohrleitungen",
+      "kaufdatum": 1539521170217
+    }, {
+      "vehicleKind": "GW",
+      "vehicleType": "Uce",
+      "companyCode": "RhB",
+      "epoche": "IV",
+      "bezeichnung": "Uce",
+      "farbe": "silber",
+      "nummer": "8003",
+      "hersteller": "bemo",
+      "preis": "20 CHF",
+      "anzahl": 1,
+      "bemerkung": "Altes RhB Logo überklabt mit 'Am besten Beton', blaue Rohrleitungen",
+      "kaufdatum": 1539521170217
     }
   ]
 }

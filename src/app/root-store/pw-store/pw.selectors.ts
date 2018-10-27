@@ -15,12 +15,12 @@ export const selectPwState: MemoizedSelector<
   State
 > = createFeatureSelector<State>('pwagen');
 
-export const selectMyFeatureError: MemoizedSelector<
-  object,
-  any
-> = createSelector(selectPwState, getError);
-
 export const selectPwList: MemoizedSelector<object, Vehicle[]> = createSelector(
   selectPwState,
   getPwList
+);
+
+export const selectPwError: MemoizedSelector<object, any> = createSelector(
+  selectPwState,
+  getError
 );

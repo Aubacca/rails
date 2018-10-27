@@ -6,7 +6,10 @@ import { ShowLoader, HideLoader } from '../spinner-store/shared/decorators';
 export enum LocoActionTypes {
   GET_LOCOS = '[My Loco] Get all',
   GET_LOCOS_SUCCESS = '[My Loco] Get all success',
-  GET_LOCOS_FAILURE = '[My Loco] Get all failure'
+  GET_LOCOS_FAILURE = '[My Loco] Get all failure',
+  GET_LOCO_ONE = '[My Loco] Get one',
+  GET_LOCO_ONE_SUCCESS = '[My Loco] Get one success',
+  GET_LOCO_ONE_FAILURE = '[My Loco] Get one failure'
 }
 
 @ShowLoader()
@@ -27,4 +30,26 @@ export class GetLocosFailure implements Action {
   constructor(public payload: { error: string }) {}
 }
 
-export type LocoActions = GetLocos | GetLocosFailure | GetLocosSuccess;
+export class GetLocoOne implements Action {
+  readonly type = LocoActionTypes.GET_LOCO_ONE;
+  constructor(public payload: { nummer: string }) {}
+}
+
+@HideLoader(LocoActionTypes.GET_LOCOS)
+export class GetLocoOneSuccess implements Action {
+  readonly type = LocoActionTypes.GET_LOCO_ONE_SUCCESS;
+  constructor(public payload: { vehicle: Vehicle }) {}
+}
+
+export class GetLocoOneFailure implements Action {
+  readonly type = LocoActionTypes.GET_LOCO_ONE_FAILURE;
+  constructor(public payload: { error: string }) {}
+}
+
+export type LocoActions =
+  | GetLocos
+  | GetLocosFailure
+  | GetLocosSuccess
+  | GetLocoOne
+  | GetLocoOneSuccess
+  | GetLocoOneFailure;
