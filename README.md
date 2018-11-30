@@ -33,25 +33,36 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+# Read it!
+
+<a href="https://www.typescriptlang.org/docs/handbook/advanced-types.html" target="_blank">Advanced Types</a>
+<a href="https://basarat.gitbooks.io/typescript/docs/types/type-system.html" target="_blank">TypeScript Type System</a>
+<a href="https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c" target="_blank">Interface vs Type alias in TypeScript 2.7</a>
+
 # Add NgRx Store
 
 ## Best Practice #1 — The Root Store Module
 
 1. Install packages via NPM:
+
 ```cmd
 npm install @ngrx/{store,store-devtools,entity,effects}
 ```
+
 otherwise use this statement:
+
 ```cmd
 npm install @ngrx/store @ngrx/effects @ngrx/store-devtools --save
 ```
 
-2. Generate RootStoreModule: 
+2. Generate RootStoreModule:
+
 ```cmd
 ng g module root-store —-flat false —-module app.module.ts
 ```
 
 3. Generate RootState interface to represent the entire state of your application:
+
 ```cmd
 ng g interface root-store/root-state
 ```
@@ -61,11 +72,13 @@ ng g interface root-store/root-state
 Suggested Implementation — Standard Feature Module
 
 1. Generate MyFeatureStoreModule feature module
+
 ```cmd
 ng g module root-store/my-feature-store --flat false --module root-store/root-store.module.ts
 ```
 
 2. Actions — Create an actions.ts file in the app/root-store/my-feature-store directory:
+
 ```javaScript
 import { Action } from '@ngrx/store';
 import { User } from '../../models';
@@ -95,6 +108,7 @@ export type Actions = LoginRequestAction | LoginFailureAction | LoginSuccessActi
 ```
 
 3. State — Create a state.ts file in the app/root-store/my-feature-store directory
+
 ```javascript
 import { User } from '../../models';
 
@@ -108,44 +122,45 @@ export const initialState: State = {
   user: null,
   isLoading: false,
   error: null
-}
+};
 ```
 
 4. Reducer — Create a reducer.ts file in the app/root-store/my-feature-store directory
+
 ```javascript
 import { Actions, ActionTypes } from './actions';
 import { initialState, State } from './state';
 
 export function featureReducer(state = initialState, action: Actions): State {
-   switch (action.type) {
-      case ActionTypes.LOGIN_REQUEST:
-        return {
-          ...state,
-          error: null,
-          isLoading: true
-        };
-      case ActionTypes.LOGIN_SUCCESS:
-        return {
-          ...state,
-          user: action.payload.user,
-          error: null,
-          isLoading: false,
-
-        };
-      case ActionTypes.LOGIN_FAILURE:
-        return {
-          ...state,
-          error: action.payload.error,
-          isLoading: false
-        };
-      default: {
-         return state;
-      }
+  switch (action.type) {
+    case ActionTypes.LOGIN_REQUEST:
+      return {
+        ...state,
+        error: null,
+        isLoading: true
+      };
+    case ActionTypes.LOGIN_SUCCESS:
+      return {
+        ...state,
+        user: action.payload.user,
+        error: null,
+        isLoading: false
+      };
+    case ActionTypes.LOGIN_FAILURE:
+      return {
+        ...state,
+        error: action.payload.error,
+        isLoading: false
+      };
+    default: {
+      return state;
     }
+  }
 }
 ```
 
 5. Selectors — Create a selectors.ts file in the app/root-store/my-feature-store directory
+
 ```javascript
 import {
   createFeatureSelector,
@@ -163,15 +178,13 @@ const getIsLoading = (state: State): boolean => state.isLoading;
 
 const getUser = (state: State): any => state.user;
 
-export const selectMyFeatureState: MemoizedSelector<
-  object,
-  State
-> = createFeatureSelector<State>('myFeature');
+export const selectMyFeatureState: MemoizedSelector<object, State> =
+  createFeatureSelector < State > 'myFeature';
 
-export const selectMyFeatureError: MemoizedSelector<object, any> = createSelector(
-  selectMyFeatureState,
-  getError
-);
+export const selectMyFeatureError: MemoizedSelector<
+  object,
+  any
+> = createSelector(selectMyFeatureState, getError);
 
 export const selectMyFeatureIsLoading: MemoizedSelector<
   object,
@@ -185,6 +198,7 @@ export const selectMyFeatureUser: MemoizedSelector<
 ```
 
 6. Effects — Create an effects.ts file in the app/root-store/my-feature-store directory with the following
+
 ```javascript
 import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
@@ -223,6 +237,7 @@ export class MyFeatureStoreEffects {
 ```
 
 7. Update the app/root-store/my-feature-store/my-feature-store.module.ts with the following
+
 ```javascript
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -243,23 +258,19 @@ export class MyFeatureStoreModule {}
 ```
 
 8. Create an app/root-store/my-feature-store/index.ts barrel export
+
 ```javascript
 import * as MyFeatureStoreActions from './actions';
 import * as MyFeatureStoreSelectors from './selectors';
 import * as MyFeatureStoreState from './state';
 
-export {
-  MyFeatureStoreModule
-} from './my-feature-store.module';
+export { MyFeatureStoreModule } from './my-feature-store.module';
 
-export {
-  MyFeatureStoreActions,
-  MyFeatureStoreSelectors,
-  MyFeatureStoreState
-};
+export { MyFeatureStoreActions, MyFeatureStoreSelectors, MyFeatureStoreState };
 ```
 
 9. Update app/root-store/root-state.ts and add a property for each feature that we have created previously
+
 ```javascript
 import { MyFeatureStoreState } from './my-feature-store';
 import { MyOtherFeatureStoreState } from './my-other-feature-store';
@@ -299,13 +310,9 @@ export class RootStoreModule {}
 
 ```javascript
 import { createSelector, MemoizedSelector } from '@ngrx/store';
-import {
-  MyFeatureStoreSelectors
-} from './my-feature-store';
+import { MyFeatureStoreSelectors } from './my-feature-store';
 
-import {
-  MyOtherFeatureStoreSelectors
-} from './my-other-feature-store';
+import { MyOtherFeatureStoreSelectors } from './my-other-feature-store';
 
 export const selectError: MemoizedSelector<object, string> = createSelector(
   MyFeatureStoreSelectors.selectMyFeatureError,
@@ -349,6 +356,7 @@ import { RootStoreModule } from ‘./root-store’;
 ```
 
 2. Here’s an example container component that is using the store
+
 ```javascript
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';

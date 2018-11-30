@@ -2,7 +2,15 @@ import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
 import { Observable, of as observableOf } from 'rxjs';
-import { catchError, map, switchMap, debounceTime } from 'rxjs/operators';
+import {
+  catchError,
+  map,
+  switchMap,
+  debounceTime,
+  take,
+  tap,
+  first
+} from 'rxjs/operators';
 
 import * as locoActions from './loco.actions';
 import { VehicleService } from '../../features/overview/services/vehicle.service';
@@ -37,7 +45,16 @@ export class LocoStoreEffects {
     switchMap(action =>
       this._locoService.findByNumber(action.payload.nummer).pipe(
         debounceTime(3000),
-        map(loco => new locoActions.GetLocoOneSuccess({ vehicle: loco })),
+        first(),
+        take(1),
+        // tap(loco => {
+        //   console.log('loadLocoOne>loco=', loco);
+        //   return new locoActions.GetLocoOneSuccess({ vehicle: loco });
+        // }),
+        map(loco => {
+          console.log('loadLocoOne>loco=', loco[0]);
+          return new locoActions.GetLocoOneSuccess({ vehicle: loco[0] });
+        }),
         catchError(error =>
           observableOf(new locoActions.GetLocoOneFailure({ error }))
         )

@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 
 import { VehicleService } from 'src/app/features/overview/services/vehicle.service';
 import { VehicleKind } from 'src/app/features/overview/services/vehicle-kind.enum';
+import { Vehicle } from 'src/app/models/models';
 
 @Component({
   selector: 'rs-home',

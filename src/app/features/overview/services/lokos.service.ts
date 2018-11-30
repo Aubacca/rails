@@ -1,31 +1,52 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { tap, catchError } from 'rxjs/operators';
+import { tap, catchError, first } from 'rxjs/operators';
+import { Vehicle } from 'src/app/models/models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LokosService {
+  private HOST_URL = 'http://localhost:3000';
   constructor(private _http: HttpClient) {}
 
   public findAll(): Observable<Vehicle[]> {
     console.log('LokosService.findAll>begin');
-    return this._http.get<Vehicle[]>('http://localhost:3000/loks').pipe(
-      tap(data => console.log('data:', data)),
-      catchError(this.handleError('findAll', []))
-    );
+    return this._http
+      .get<Vehicle[]>(`${this.HOST_URL}/vehicles?vehicleKind=LOK`)
+      .pipe(
+        tap(data => console.log('data:', data)),
+        catchError(this.handleError('findAll', []))
+      );
   }
 
   public findByNumber(locoNumber: string): Observable<Vehicle> {
     console.log('LokosService.findByNumber>begin: locoNumber=', locoNumber);
     return this._http
       .get<Vehicle>(
-        `http://localhost:3000/vehicles?vehicleKind=LOK&nummer=${locoNumber}`
+        `${this.HOST_URL}/vehicles?vehicleKind=LOK&nummer=${locoNumber}`
       )
       .pipe(
+        first(),
         tap(data => console.log('LokosService.findByNumber>data:', data)),
         catchError(this.handleError('findByNumber', null))
+      );
+  }
+
+  public updateLoco(loco: Vehicle): Observable<Vehicle> {
+    console.log('LokosService.update>begin: loco=', loco);
+    return this._http
+      .put<Vehicle>(
+        // `${this.HOST_URL}/vehicles?vehicleKind=LOK&nummer=${loco.nummer}`,
+        `${this.HOST_URL}/vehicles/${loco.id}`,
+        loco
+      )
+      .pipe(
+        tap(vehicle =>
+          console.log('LokosService.updateLoco>vehicle:', vehicle)
+        ),
+        catchError(this.handleError('update', loco))
       );
   }
 

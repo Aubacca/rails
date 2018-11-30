@@ -1,5 +1,7 @@
 import { Action } from '@ngrx/store';
 
+import { Vehicle } from 'src/app/models/models';
+
 export enum PwActionTypes {
   LOAD_PW = '[PW] Load all',
   LOAD_PW_SUCCESS = '[PW] Load all success',

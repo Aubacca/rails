@@ -1,15 +1,18 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { LocoFormServiceService } from './loco-form-service.service';
+import { LocoFormService } from './loco-form-service.service';
 
 describe('LocoFormServiceService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [LocoFormServiceService]
+      providers: [LocoFormService]
     });
   });
 
-  it('should be created', inject([LocoFormServiceService], (service: LocoFormServiceService) => {
-    expect(service).toBeTruthy();
-  }));
+  it('should be created', inject(
+    [LocoFormService],
+    (service: LocoFormService) => {
+      expect(service).toBeTruthy();
+    }
+  ));
 });

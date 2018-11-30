@@ -4,9 +4,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { LocosRoutingModule } from './locos-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { HomeComponent } from './components/home/home.component';
-import { LocosComponent } from './containers/loco-list/locos.component';
-import { LocoDetailsComponent } from './components/loco-details/loco-details.component';
+import { CommonUtilsModule } from 'src/app/common-utils/common-utils.module';
+
+import * as fromComponents from './components';
+import * as fromContainers from './containers';
 
 @NgModule({
   imports: [
@@ -14,8 +15,14 @@ import { LocoDetailsComponent } from './components/loco-details/loco-details.com
     FormsModule,
     ReactiveFormsModule,
     LocosRoutingModule,
-    SharedModule
+    SharedModule,
+    CommonUtilsModule
   ],
-  declarations: [HomeComponent, LocosComponent, LocoDetailsComponent]
+  declarations: [
+    ...fromComponents.componentList,
+    ...fromContainers.containerList
+  ],
+  exports: [...fromComponents.componentList, ...fromContainers.containerList]
+  // declarations: [HomeComponent, LocosComponent, LocoDetailsComponent]
 })
 export class LocosModule {}

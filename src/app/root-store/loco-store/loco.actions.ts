@@ -2,6 +2,7 @@ import { Action } from '@ngrx/store';
 
 import { VehicleKind } from '../../features/overview/services/vehicle-kind.enum';
 import { ShowLoader, HideLoader } from '../spinner-store/shared/decorators';
+import { Vehicle } from 'src/app/models/models';
 
 export enum LocoActionTypes {
   GET_LOCOS = '[My Loco] Get all',

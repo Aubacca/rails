@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PwsRoutingModule } from './pws-routing.module';
-import { PwListComponent } from './container/pw-list/pw-list.component';
 import { SharedModule } from '../shared/shared.module';
+// import { PwListComponent } from './container/pw-list/pw-list.component';
+
+import * as fromComponents from './container';
 
 @NgModule({
   imports: [CommonModule, PwsRoutingModule, SharedModule],
-  declarations: [PwListComponent]
+  declarations: [...fromComponents.componentList]
+  // declarations: [PwListComponent]
 })
 export class PwsModule {}

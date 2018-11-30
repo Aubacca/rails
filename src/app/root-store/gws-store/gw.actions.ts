@@ -1,4 +1,5 @@
 import { Action } from '@ngrx/store';
+import { Vehicle } from 'src/app/models/models';
 
 export enum GwActionTypes {
   LoadGw = '[GW] Load Gws',

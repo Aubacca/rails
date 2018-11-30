@@ -2,22 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { VehicleKind } from '../../../overview/services/vehicle-kind.enum';
+import { VehicleKind } from 'src/app/features/overview/services/vehicle-kind.enum';
 import {
   RootStoreState,
-  LocoStoreActions,
-  LocoStoreSelectors
-} from '../../../../root-store';
+  LocoStoreSelectors,
+  LocoStoreActions
+} from 'src/app/root-store';
+import { Vehicle } from 'src/app/models/models';
 
 @Component({
-  // selector: 'rs-loco2',
-  template: `<rs-loco-list [pageTitle]="'Liste aller Lokomotiven (mit Store)'" [locoList$]="myLocoList$"></rs-loco-list>`,
+  template: `<hr>
+  Total Lokomotiven: <b>{{ totalCount$ | async }}</b>
+  <rs-loco-list [pageTitle]="'Liste aller Lokomotiven (mit Store)'" [locoList$]="myLocoList$"></rs-loco-list>`,
   styles: []
 })
 export class LocosComponent implements OnInit {
   myLocoList$: Observable<Vehicle[]>;
   error$: Observable<string>;
   isLoading$: Observable<boolean>;
+  totalCount$: Observable<number>;
 
   constructor(private store$: Store<RootStoreState.RootState>) {}
 
@@ -32,6 +35,9 @@ export class LocosComponent implements OnInit {
 
     this.error$ = this.store$.pipe(
       select(LocoStoreSelectors.selectMyFeatureError)
+    );
+    this.totalCount$ = this.store$.pipe(
+      select(LocoStoreSelectors.selectLocoTotal)
     );
 
     // this.isLoading$ = this.store$.select(

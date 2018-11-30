@@ -16,18 +16,41 @@
 </div> -->
 <hr>
 <h3>Reactive Form (via Service)</h3>
-<div *ngFor="let locoDetail of locoDetails$ | async">
-  <form (ngSubmit)="onSubmit()">
-    <div [formGroup]="newLocoForm">
-      <div>Loktyp: <input matInput placeholder="Loktyp" formControlName="lokType" /></div>
-      <div>Nummer: <input matInput placeholder="Loknummer" formControlName="nummer" [value]="locoDetail.nummer" /></div>
-      <div>Firma: <input matInput placeholder="Company code" formControlName="companyCode" [value]="locoDetail.companyCode" /></div>
-      <div>Epoche: <input matInput placeholder="Epoche" formControlName="epoche" [value]="locoDetail.epoche" /></div>
-      <div>Hersteller: <input matInput placeholder="Hersteller" formControlName="hersteller" [value]="locoDetail.hersteller" /></div>
-      <div>Preis: <input matInput placeholder="Preis" formControlName="preis" [value]="locoDetail.preis" /></div>
-      <div>Bemerkung: <input matInput placeholder="Bezeichnung" formControlName="bezeichnung" [value]="locoDetail.bemerkung" /></div>
-    </div>
+<!-- <div *ngFor="let locoDetail of myLocoDetail$ | async">
+  <form (ngSubmit)="onSubmit()" [formGroup]="newLocoForm" [cuConnectForm]="locoDetail">
+    <div>Loktyp: <input matInput placeholder="Loktyp" formControlName="vehicleKind" /></div>
+    <div>Typ: <input matInput placeholder="Typ" formControlName="vehicleType" /></div>
+    <div>Kategorie: <input matInput placeholder="Kategorie" formControlName="lokType" /></div>
+    <div>Bezeichnung: <input matInput placeholder="Bezeichnung" formControlName="bezeichnung" [value]="locoDetail.bezeichnung" /></div>
+    <div>Nummer: <input matInput placeholder="Loknummer" formControlName="nummer" [value]="locoDetail.nummer" /></div>
+    <div>Farbe: <input matInput placeholder="Farbe" formControlName="farbe" [value]="locoDetail.farbe" /></div>
+    <div>Firma: <input matInput placeholder="Company code" formControlName="companyCode" [value]="locoDetail.companyCode" /></div>
+    <div>Epoche: <input matInput placeholder="Epoche" formControlName="epoche" [value]="locoDetail.epoche" /></div>
+    <div>Hersteller: <input matInput placeholder="Hersteller" formControlName="hersteller" [value]="locoDetail.hersteller" /></div>
+    <div>Preis: <input matInput placeholder="Preis" formControlName="preis" [value]="locoDetail.preis" /></div>
+    <div>Anzahl: <input matInput placeholder="Stückzahl" formControlName="anzahl" [value]="locoDetail.anzahl" /></div>
+    <div>Bemerkung: <input matInput placeholder="Bemerkung" formControlName="bemerkung" [value]="locoDetail.bemerkung" /></div>
 
     <button type="submit">Save</button>
   </form>
-</div>
+</div> -->
+
+
+<hr>
+<form (ngSubmit)="onSubmit()" [formGroup]="newLocoForm" [cuConnectForm]="myLocoDetail$ | async">
+  <!-- <div>ID: <input matInput placeholder="ID" formControlName="id" /></div> -->
+  <div>Loktyp: <input matInput placeholder="Loktyp" formControlName="vehicleKind" /></div>
+  <div>Typ: <input matInput placeholder="Typ" formControlName="vehicleType" /></div>
+  <div>Kategorie: <input matInput placeholder="Kategorie" formControlName="lokType" /></div>
+  <div>Bezeichnung: <input matInput placeholder="Bezeichnung" formControlName="bezeichnung" /></div>
+  <div>Nummer: <input matInput placeholder="Loknummer" formControlName="nummer" /></div>
+  <div>Farbe: <input matInput placeholder="Farbe" formControlName="farbe" /></div>
+  <div>Firma: <input matInput placeholder="Company code" formControlName="companyCode" /></div>
+  <div>Epoche: <input matInput placeholder="Epoche" formControlName="epoche" /></div>
+  <div>Hersteller: <input matInput placeholder="Hersteller" formControlName="hersteller" /></div>
+  <div>Preis: <input matInput placeholder="Preis" formControlName="preis" /></div>
+  <div>Anzahl: <input matInput placeholder="Stückzahl" formControlName="anzahl" /></div>
+  <div>Bemerkung: <input matInput placeholder="Bemerkung" formControlName="bemerkung" /></div>
+
+  <button type="submit">Save</button>
+</form>

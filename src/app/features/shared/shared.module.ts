@@ -2,13 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { VehicleListComponent } from './components/vehicle-list/vehicle-list.component';
-import { CompanyListComponent } from './components/company-list/company-list.component';
-import { LocoListComponent } from './components/loco-list/loco-list.component';
+import * as fromComponents from './components';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
-  declarations: [VehicleListComponent, CompanyListComponent, LocoListComponent],
-  exports: [VehicleListComponent, CompanyListComponent, LocoListComponent]
+  declarations: [...fromComponents.componentList],
+  exports: [...fromComponents.componentList]
 })
 export class SharedModule {}

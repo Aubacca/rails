@@ -13,14 +13,19 @@ export class LocoFormService {
     console.log('LocoFormService.initForm>begin');
     // Setup reactive form.
     this.form = this.fb.group({
-      lokType: [{ value: 'LOK', disabled: true }, Validators.required],
+      // id: [null, Validators.required],
+      anzahl: [null, Validators.required],
+      bemerkung: [null],
+      bezeichnung: [null, Validators.required],
       companyCode: [null, Validators.required],
       epoche: [null, Validators.required],
-      bezeichnung: [null, Validators.required],
-      nummer: [null, Validators.required],
+      farbe: [null],
       hersteller: [null, Validators.required],
-      preis: [null, Validators.required],
-      bemerkung: [null, Validators.required]
+      lokType: [null, Validators.required],
+      nummer: [null, Validators.required],
+      preis: [null],
+      vehicleKind: [{ value: 'LOK', disabled: true }, Validators.required],
+      vehicleType: [null, Validators.required]
     });
     // { validator: this.pizzaValidatorsService.formValidator() }
     console.log('LocoFormService.initForm>end');

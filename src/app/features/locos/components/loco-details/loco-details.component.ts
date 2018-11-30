@@ -1,17 +1,23 @@
-import { GetLocoOne } from './../../../../root-store/loco-store/loco.actions';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { switchMap, tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  FormGroupDirective
+} from '@angular/forms';
 
-import { LokosService } from './../../../overview/services/lokos.service';
+import { LokosService } from 'src/app/features/overview/services/lokos.service';
 import { LocoFormService } from './loco-form-service.service';
 import {
   RootStoreState,
   LocoStoreSelectors,
   LocoStoreActions
 } from 'src/app/root-store';
+import { Vehicle } from 'src/app/models/models';
 
 @Component({
   selector: 'rs-loco-details',
@@ -52,8 +58,20 @@ export class LocoDetailsComponent implements OnInit {
   }
 
   public onSubmit() {
-    console.log('form value:', this.newLocoForm);
-    console.log('form value:', this.newLocoForm.value);
+    console.log('LocoDetailsComponent.onSubmit>form value:', this.newLocoForm);
+    console.log(
+      'LocoDetailsComponent.onSubmit>html form value:',
+      this.newLocoForm.value
+    );
+    console.log(
+      'LocoDetailsComponent.onSubmit>ts form value:',
+      this._formServie.form.value
+    );
+    // this._locoServie
+    //   .updateLoco(this.newLocoForm.value)
+    //   .subscribe(updatedLoco =>
+    //     console.log('LocoDetailsComponent.onSubmit>updatedLoco:', updatedLoco)
+    //   );
   }
 
   private init(locoNummer: string) {
