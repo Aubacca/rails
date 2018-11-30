@@ -1,4 +1,5 @@
 import { Action } from '@ngrx/store';
+import { Company } from 'src/app/models/models';
 
 export enum CompanyActionTypes {
   GET_COMPANIES = '[Companies] Get all',

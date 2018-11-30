@@ -1,3 +1,40 @@
-<p>
-  company-details works!
-</p>
+<!-- <div>{{ companyDetail$ | async | json }}</div> -->
+
+<h2><a href="https://malcoded.com/posts/angular-fundamentals-reactive-forms" target="_blank">Reactive
+    Forms with
+    Angular [Using easy
+    Examples]</a></h2>
+
+
+<h3 rsHighlight>Company</h3>
+<hr>
+<h3 cuHighlight>Company Details w/ Reactive Form</h3>
+<div *ngFor="let companyDetail of companyDetail$ | async">
+  <form name="one" (ngSubmit)="onSubmit()" [formGroup]="detailForm" [cuConnectForm]="companyDetail">
+    <div>Code: <input matInput placeholder="Code" formControlName="code" [value]="companyDetail.code" /></div>
+    <div>Bezeichnung: <input matInput placeholder="Bezeichnung" formControlName="desc" [value]="companyDetail.desc" /></div>
+    <button type="submit">Save</button>
+  </form>
+</div>
+
+<form name="one" (ngSubmit)="onSubmit()" [formGroup]="detailForm" [cuConnectForm]="companyDetail$ | async">
+  <div>Code: <input matInput placeholder="Code" formControlName="code" /></div>
+  <div>Bezeichnung: <input matInput placeholder="Bezeichnung" formControlName="desc" /></div>
+  <button type="submit">Save</button>
+</form>
+
+<hr>
+<h3 cuHighlight>Company Details w/ Reactive Form and subscribed observable from service</h3>
+<div *ngFor="let companyDetail of companyDetailsTwo">
+  <form name="one" (ngSubmit)="onSubmitTwo()" [formGroup]="detailFormTwo">
+    <div>Code: <input matInput placeholder="Code" formControlName="code" [value]="companyDetail.code" /></div>
+    <div>Bezeichnung: <input matInput placeholder="Bezeichnung" formControlName="desc" [value]="companyDetail.desc" /></div>
+    <button type="submit">Save</button>
+  </form>
+</div>
+
+<form name="one" (ngSubmit)="onSubmitTwo()" [formGroup]="detailFormTwo">
+  <div>Code: <input matInput placeholder="Code" formControlName="code" /></div>
+  <div>Bezeichnung: <input matInput placeholder="Bezeichnung" formControlName="desc" /></div>
+  <button type="submit">Save</button>
+</form>

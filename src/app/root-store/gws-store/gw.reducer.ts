@@ -7,10 +7,19 @@ export function gwReducer(state = initialState, action: GwActions): State {
       return { ...state, error: null };
 
     case GwActionTypes.LoadGwSuccess:
-      return { ...state, gwList: action.payload.gwList$, error: null };
+      const newTotal = action.payload.gwList$.reduce(
+        (accumulator, currentValue) => accumulator + currentValue.anzahl,
+        0
+      );
+      return {
+        ...state,
+        gwList: action.payload.gwList$,
+        error: null,
+        totalCount: newTotal
+      };
 
     case GwActionTypes.LoadGwFailure:
-      return { ...state, error: action.payload.error };
+      return { ...state, error: action.payload.error, totalCount: 0 };
 
     default:
       return state;

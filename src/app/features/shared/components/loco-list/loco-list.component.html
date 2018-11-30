@@ -6,7 +6,7 @@
     <div>
       <b><a [routerLink]="[loco.nummer]" routerLinkActive="router-link-active">{{
           loco.vehicleType }}
-          / {{ loco.nummer }}</a></b>
+          / {{ loco.nummer }}</a> <small><i> ({{loco.id}})</i></small></b>
       <div><small>{{ loco.companyCode }} {{ loco.bezeichnung }}</small></div>
       <div><small>Epoche: {{ loco.epoche }}</small></div>
     </div>

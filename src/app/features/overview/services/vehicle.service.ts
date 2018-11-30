@@ -1,3 +1,4 @@
+import { VehicleKindType } from './../../../models/models';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -5,6 +6,7 @@ import { Observable } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
 
 import { VehicleKind } from './vehicle-kind.enum';
+import { Vehicle } from 'src/app/models/models';
 
 @Injectable({
   providedIn: 'root'

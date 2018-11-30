@@ -1,4 +1,4 @@
-interface RootObject {
+export interface RootObject {
   companies: Company[];
   epoche: Epoche[];
   lokType: LokType[];
@@ -7,8 +7,12 @@ interface RootObject {
   vehicles: Vehicle[];
 }
 
-interface Vehicle {
+export type VehicleKindType = 'LOK' | 'GW' | 'PW;';
+
+export interface Vehicle {
+  id: number;
   vehicleKind: string;
+  // vehicleKind: VehicleKindType;
   vehicleType: string;
   companyCode: string;
   epoche: string;
@@ -18,7 +22,7 @@ interface Vehicle {
   hersteller: string;
   preis: string;
   anzahl: number;
-  bemerkung: string;
+  bemerkung?: string;
 }
 
 interface Lok {
@@ -29,22 +33,22 @@ interface Lok {
   nummer: string;
   hersteller: string;
   preis: string;
-  bemerkung: string;
+  bemerkung?: string;
 }
 
-interface Hersteller {
+export interface Hersteller {
   roco: string;
   liliput: string;
   jouef: string;
 }
 
-interface LokType {
+export interface LokType {
   dampf?: string;
   diesel?: string;
   elektro?: string;
 }
 
-interface Epoche {
+export interface Epoche {
   I: string;
   II: string;
   III: string;
@@ -54,7 +58,7 @@ interface Epoche {
   VII: string;
 }
 
-interface Company {
+export interface Company {
   code: string;
   desc: string;
 }

@@ -10,10 +10,23 @@ export function companyReducer(
       return { ...state, error: null };
 
     case CompanyActionTypes.GET_COMPANIES_SUCCESS:
-      return { ...state, companyList: action.payload.companyList };
+      const newTotal = action.payload.companyList.reduce(
+        (accumulator, currentValue) => accumulator + 1,
+        0
+      );
+      return {
+        ...state,
+        companyList: action.payload.companyList,
+        totalCount: newTotal
+      };
 
     case CompanyActionTypes.GET_COMPANIES_FAILURE:
-      return { ...state, companyList: [], error: action.payload.error };
+      return {
+        ...state,
+        companyList: [],
+        error: action.payload.error,
+        totalCount: 0
+      };
 
     default:
       return state;

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Company } from 'src/app/models/models';
 
 @Component({
   selector: 'rs-company-list',
